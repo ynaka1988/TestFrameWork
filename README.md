@@ -1,5 +1,7 @@
 # TestFrameWork
 
+This is example of using Google Test.
+
 ## How to build
 
 ```
