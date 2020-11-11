@@ -7,7 +7,10 @@ project(
 	LANGUAGES CXX
 )
 
-add_library(TestTarget STATIC Sample.h Sample.cpp)
+file (GLOB CPPSRCS *.cpp)
+file (GLOB HEADS *.h)
+
+add_library(TestTarget STATIC ${HEADS} ${CPPSRCS})
 
 target_compile_features(TestTarget PRIVATE cxx_std_98)
 target_compile_options(TestTarget PRIVATE -g -Og -Wall)
